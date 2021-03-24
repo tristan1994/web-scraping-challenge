@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mars Scrape</title>
+    <!-- <link rel="stylesheet" href="static/reset.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/style.css">
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="jumbotron text-center">
+            <h1>Mission to Mars</h1>
+            <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+        </div>
+        <div class='row'>
+            <div class='col-md-12'>
+                <div class='first_fact'>
+                    <h1>
+                        <strong>Latest Mars News</strong>
+                    </h1>
+                    <p class='title'>
+                        <strong>{{scrape_mars.Mars_news_title}}</strong>
+                    </p>
+                    <p class='paragraph'>
+                        {{scrape_mars.Mars_news_p}}
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+        <div class='row'>
+            <div class='col-md-8'>
+                <div class='second_fact'>
+                    <h1>
+                        <strong>
+                            Featured Mars Image
+                        </strong>
+                    </h1>
+                    <img src="{{scrape_mars.Mars_featured_image}}" alt="Mars featured image">
+                </div>
+
+            </div>
+            
+        </div>
+
+    </div>
+    <div class='container-fluid'>
+        <div class='jumbotron text-center'>
+            <h1>
+                <strong>Mars Hemispheres</strong>
+            </h1>
+            <hr>
+        </div>
+        <div class='row'>
+            <div class='col-md-6'>
+                <div class="mars_image">
+                    <img src="{{scrape_mars.Mars_hemispheres[1]['img_url']}}" alt="First_image" width="800px" height="800px">
+                    <h2>{{scrape_mars.Mars_hemispheres[1]['title']}}</h2>
+                </div>
+                <div class="mars_image">
+                    <img src="{{scrape_mars.Mars_hemispheres[1]['img_url']}}" alt="Second_image" width="800px" height="800px">
+                    <h2>{{scrape_mars.Mars_hemispheres[1]['title']}}</h2>
+                </div>
+            </div>
+            <div class='col-md-6'>
+                <div class="mars_image">
+                    <img src="{{scrape_mars.Mars_hemispheres[2]['img_url']}}" alt="Third_image" width="800px" height="800px">
+                    <h2>{{scrape_mars.Mars_hemispheres[2]['title']}}</h2>
+                </div>
+                <div class="mars_image">
+                    <img src="{{scrape_mars.Mars_hemispheres[3]['img_url']}}" alt="Fourth_image" width="800px" height="800px">
+                    <h2>{{scrape_mars.Mars_hemispheres[3]['title']}}</h2>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
